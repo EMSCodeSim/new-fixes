@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+header {
+  background-color: #003366;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  height: 50px;
+}
+
+.header-buttons {
+  position: absolute;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+#chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+#chat-box {
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 10px;
+  overflow-y: auto;
+  background: #f9f9f9;
+}
+
+#input-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#user-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  resize: none;
+}
+
+#send-button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#mic-button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  background-color: #444;
+  color: white;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+#mic-button.active {
+  background-color: red;
+}
