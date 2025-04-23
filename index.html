@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>EMS Code Sim</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div id="banner">
-      <h1>EMS Code Sim</h1>
-      <button id="startButton">Start Scenario</button>
-      <button id="endButton">End Scenario</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EMS Code Sim</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <header>
+    <img src="emscodesim.png" alt="EMS Code Sim" class="logo">
+    <div class="header-buttons">
+      <button id="scenario-button">Start Scenario</button>
+      <button id="end-button">End Scenario</button>
+    </div>
+  </header>
+
+  <div id="chat-container">
+    <div id="chat-box"></div>
+
+    <div id="input-container">
+      <textarea id="user-input" rows="2" placeholder="Type your response here..."></textarea>
+      <button id="send-button">Send</button>
     </div>
 
-    <div id="output">Scenario output will appear here...</div>
+    <button id="mic-button">🎤 Hold to Speak</button>
+  </div>
 
-    <div id="inputArea">
-      <textarea id="userInput" placeholder="Type here..." rows="2"></textarea>
-      <button id="sendButton">Send</button>
-      <button id="micButton">🎤</button>
-    </div>
-
-    <script src="scripts/app.js"></script>
-  </body>
+  <!-- ✅ JS loads after content is rendered -->
+  <script type="module" src="scripts/app.js"></script>
+</body>
 </html>
