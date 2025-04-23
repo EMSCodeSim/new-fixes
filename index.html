@@ -2,31 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>EMS Code Sim</title>
-  <link rel="stylesheet" href="styles/style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #e0f0ff;
+    }
+    header {
+      background-color: white;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #ccc;
+    }
+    #logo {
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+    #chatDisplay {
+      height: 60vh;
+      overflow-y: auto;
+      padding: 20px;
+      background: white;
+      margin: 20px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+    #controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      background: white;
+    }
+    #userInput {
+      width: 70%;
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+    #sendButton, #startButton, #endButton {
+      padding: 10px 20px;
+      font-size: 1em;
+      margin: 5px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+    }
+    #startButton { background-color: teal; color: white; }
+    #endButton { background-color: red; color: white; }
+    #sendButton { background-color: #007bff; color: white; }
+  </style>
 </head>
 <body>
   <header>
-    <img src="emscodesim.png" alt="EMS Code Sim" class="logo">
-    <div class="header-buttons">
-      <button id="scenario-button">Start Scenario</button>
-      <button id="end-button">End Scenario</button>
+    <div id="logo">EMS CODE SIM</div>
+    <div>
+      <button id="startButton">Start Scenario</button>
+      <button id="endButton">End Scenario</button>
     </div>
   </header>
 
-  <div id="chat-container">
-    <div id="chat-box"></div>
+  <div id="chatDisplay">Simulation output will appear here...</div>
 
-    <div id="input-container">
-      <textarea id="user-input" rows="2" placeholder="Type your response here..."></textarea>
-      <button id="send-button">Send</button>
-    </div>
-
-    <button id="mic-button">🎤 Hold to Speak</button>
+  <div id="controls">
+    <input type="text" id="userInput" placeholder="Type your response..." />
+    <button id="sendButton">Send</button>
   </div>
 
-  <!-- ✅ JS loads after content is rendered -->
-  <script type="module" src="scripts/app.js"></script>
+  <script src="scripts/app.js"></script>
 </body>
 </html>
