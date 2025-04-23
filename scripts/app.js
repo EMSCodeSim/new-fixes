@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     appendMessage("Dispatch", "You are responding to a 55-year-old male with chest pain. Scene is safe.");
 
-    // Example: load scenario data here if needed
+    // Optional: Load scenario data here
     // fetch("data/patients.json").then(res => res.json()).then(data => console.log(data));
   });
 
