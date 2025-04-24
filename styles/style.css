@@ -1,103 +1,35 @@
-* {
-  box-sizing: border-box;
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #e0f0ff;
 }
 
-html, body {
-  height: 100%;
-  font-family: Arial, sans-serif;
-  background-color: #a7dbe9;
-}
-
-body {
+header {
+  background-color: white;
+  padding: 10px;
+  text-align: center;
   display: flex;
   justify-content: center;
-  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  border-bottom: 2px solid #ccc;
 }
 
-.main-wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 430px;
-  height: 100vh;
-  background-color: #a7dbe9;
-}
-
-.header-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #a7dbe9;
-  padding: 12px;
-}
-
-.logo {
-  font-weight: bold;
-  font-size: 20px;
-  color: black;
-}
-
-.scenario-buttons {
-  display: flex;
-  gap: 6px;
-}
-
-.btn {
-  padding: 8px 12px;
-  font-weight: bold;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.start-btn {
-  background-color: #218b8b;
-  color: white;
-}
-
-.end-btn {
-  background-color: #d9534f;
-  color: white;
-}
-
-.chat-box {
-  background-color: white;
-  flex: 1;
-  width: 100%;
-  max-width: 700px;
-  margin-top: 20px;
-  padding: 10px;
-  border-radius: 8px;
-  overflow-y: auto;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
-}
-
-.input-row {
-  width: 100%;
-  max-width: 700px;
-  display: flex;
-  margin-top: 10px;
-}
-
-#user-input {
-  flex: 1;
-  padding: 10px;
-  font-size: 16px;
-}
-
-#send-button {
+button {
   padding: 10px 20px;
   font-size: 16px;
+  cursor: pointer;
 }
 
-.mic-wrapper {
-  margin-top: 10px;
+main {
+  padding: 20px;
 }
 
-.mic-button {
-  font-size: 24px;
-  padding: 6px 12px;
+.display-box {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  min-height: 200px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
