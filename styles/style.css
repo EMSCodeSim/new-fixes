@@ -1,51 +1,84 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: Arial, sans-serif;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-color: #ffffff;
+  padding: 0;
 }
 
-header {
-  background-color: #003366;
-  color: white;
-  padding: 10px;
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #a7dbe9;
+}
+
+body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 430px;
+  height: 100vh;
+  background-color: #a7dbe9;
+}
+
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #a7dbe9;
+  padding: 12px;
 }
 
 .logo {
-  height: 50px;
+  font-weight: bold;
+  font-size: 20px;
+  color: black;
 }
 
-.header-buttons {
-  position: absolute;
-  right: 10px;
+.scenario-buttons {
   display: flex;
-  gap: 10px;
+  gap: 6px;
 }
 
-#chat-container {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
+.btn {
+  padding: 8px 12px;
+  font-weight: bold;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
 }
 
-#chat-box {
+.start-btn {
+  background-color: #218b8b;
+  color: white;
+}
+
+.end-btn {
+  background-color: #d9534f;
+  color: white;
+}
+
+.chat-box {
+  background-color: white;
   flex: 1;
-  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 700px;
+  margin-top: 20px;
   padding: 10px;
+  border-radius: 8px;
   overflow-y: auto;
-  background: #f9f9f9;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
-#input-container {
+.input-row {
+  width: 100%;
+  max-width: 700px;
   display: flex;
-  align-items: center;
   margin-top: 10px;
 }
 
@@ -53,29 +86,18 @@ header {
   flex: 1;
   padding: 10px;
   font-size: 16px;
-  resize: none;
 }
 
 #send-button {
   padding: 10px 20px;
-  margin-left: 10px;
-  background-color: #003366;
-  color: white;
-  border: none;
-  cursor: pointer;
+  font-size: 16px;
 }
 
-#mic-button {
-  width: 100%;
-  padding: 15px;
+.mic-wrapper {
   margin-top: 10px;
-  background-color: #444;
-  color: white;
-  font-size: 18px;
-  border: none;
-  cursor: pointer;
 }
 
-#mic-button.active {
-  background-color: red;
+.mic-button {
+  font-size: 24px;
+  padding: 6px 12px;
 }
