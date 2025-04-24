@@ -1,33 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>EMS Code Sim</title>
-  <link rel="stylesheet" href="./styles/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="main-wrapper">
-    <div class="header-bar">
-      <div class="logo">EMS Code Sim</div>
-      <div class="scenario-buttons">
-        <button id="scenario-button" class="btn start-btn">Start Scenario</button>
-        <button id="end-button" class="btn end-btn">End Scenario</button>
-      </div>
+  <header>
+    <h1>EMS Code Sim</h1>
+    <button id="startBtn">Start Scenario</button>
+    <button id="endBtn">End Scenario</button>
+  </header>
+
+  <main>
+    <div id="scenarioDisplay" class="display-box">
+      <p>Scenario will appear here...</p>
     </div>
+  </main>
 
-    <div id="chat-display" class="chat-box"></div>
-
-    <div class="input-row">
-      <input type="text" id="user-input" placeholder="Type your response..." />
-      <button id="send-button">Send</button>
-    </div>
-
-    <div class="mic-wrapper">
-      <button id="mic-button" class="mic-button">🎤</button>
-    </div>
-  </div>
-
-  <script src="./scripts/app.js" defer></script>
+  <script src="app.js"></script>
 </body>
 </html>
