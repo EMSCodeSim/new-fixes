@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const display = document.getElementById("scenarioDisplay");
 
   startBtn.addEventListener("click", () => {
-    fetch("scenarios/chest_pain_002/dispatch.txt")
+    fetch("/scenarios/chest_pain_002/dispatch.txt")
       .then(response => {
         if (!response.ok) {
           throw new Error("Dispatch file not found.");
