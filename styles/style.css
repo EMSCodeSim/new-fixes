@@ -1,108 +1,81 @@
-/* General body styling */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #e0f7ff;
-}
-
-/* Header / Banner */
-#banner {
+  height: 100vh;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: white;
-  padding: 10px 20px;
-  border-bottom: 2px solid #ccc;
+  flex-direction: column;
+  background-color: #ffffff;
 }
 
-#banner h1 {
-  margin: 0;
-  font-size: 1.5em;
-  color: #007bff;
-}
-
-/* Button styling */
-button {
-  padding: 10px 16px;
-  font-size: 1em;
-  margin-left: 10px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#startButton {
-  background-color: teal;
+header {
+  background-color: #003366;
   color: white;
-}
-
-#endButton {
-  background-color: crimson;
-  color: white;
-}
-
-#sendButton {
-  background-color: #007bff;
-  color: white;
-}
-
-#micButton {
-  background-color: #ffc107;
-  color: black;
-}
-
-/* Output display area */
-#output {
-  background: white;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 10px;
-  height: 50vh;
-  overflow-y: auto;
-  border: 1px solid #ccc;
-}
-
-/* Input area */
-#inputArea {
+  padding: 10px;
   display: flex;
-  align-items: flex-start;
   justify-content: center;
-  padding: 10px;
-  background-color: white;
-  border-top: 1px solid #ccc;
+  align-items: center;
+  position: relative;
 }
 
-#userInput {
-  width: 70%;
+.logo {
+  height: 50px;
+}
+
+.header-buttons {
+  position: absolute;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+#chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   padding: 10px;
-  font-size: 1em;
+}
+
+#chat-box {
+  flex: 1;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  resize: none;
-  margin-right: 10px;
+  padding: 10px;
+  overflow-y: auto;
+  background: #f9f9f9;
 }
 
-/* Responsive layout */
-@media (max-width: 600px) {
-  #banner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+#input-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
 
-  #inputArea {
-    flex-direction: column;
-    align-items: stretch;
-  }
+#user-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  resize: none;
+}
 
-  #userInput {
-    width: 100%;
-    margin-bottom: 10px;
-  }
+#send-button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
 
-  button {
-    width: 100%;
-    margin-left: 0;
-    margin-bottom: 10px;
-  }
+#mic-button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  background-color: #444;
+  color: white;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+#mic-button.active {
+  background-color: red;
 }
