@@ -4,11 +4,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const display = document.getElementById("scenarioDisplay");
 
   startBtn.addEventListener("click", () => {
-    display.innerHTML = `
-      <strong>Dispatch:</strong> You are responding to a 55-year-old male with chest pain.<br><br>
-      <strong>Scene:</strong> You arrive at a quiet residential neighborhood. The patient is sitting on the porch, clutching his chest and appears pale and diaphoretic.<br><br>
-      <strong>General Impression:</strong> Patient is alert but in visible discomfort.
-    `;
+    fetch("scenarios/chest_pain_002/dispatch.txt")
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Dispatch file not found.");
+        }
+        return response.text();
+      })
+      .then(data => {
+        display.innerHTML = `<strong>Dispatch:</strong> ${data}`;
+      })
+      .catch(error => {
+        display.innerHTML = `<span style='color:red;'>Error loading dispatch: ${error.message}</span>`;
+      });
   });
 
   endBtn.addEventListener("click", () => {
